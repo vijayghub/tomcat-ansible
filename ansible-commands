@@ -18,6 +18,17 @@ Group-variables: variables declared at the individual group level
 vars: varibles for group
 
 include: used to break the list of tasks into individual files and include them in tasks
+example:
+tasks
+ - name: Install all package
+   inlcude: Install.yml
+
+ - name: tomcat tasks
+   inlcude: tomcat.yml
+
+ - name: Ip tables tasks
+   inlcude: Iptables.yml
+   ------------------------------
 
 -- to create role for tomcat
 ansible-galaxyiainit tomcat
